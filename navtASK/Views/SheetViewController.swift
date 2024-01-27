@@ -42,7 +42,7 @@ class SheetViewController: UIViewController {
     private func pushViewTapped() {
         let lastVc = PushViewController()
         
-        if let foundNavigation = navigationController { // нашел навигацию на которую можно сделать пуш следующего vc 
+        if let foundNavigation = navigationController { // нашел навигацию на которую можно сделать пуш следующего vc , если вернётся nil - это значит что текущий vc не в навигационном стэке.
             print("нашел навигацию")
             foundNavigation.pushViewController(lastVc, animated: true)
         }
