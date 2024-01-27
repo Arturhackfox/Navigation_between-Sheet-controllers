@@ -42,13 +42,24 @@ class ViewController: UIViewController {
     private func openSheetTapped() {
         let pushSheetVc = SheetViewController()
         let navigation = UINavigationController(rootViewController: pushSheetVc)
+//
+//        if let sheet = pushSheetVc.sheetPresentationController {
+//            sheet.detents = [.medium(), .large()]
+//        }
         
-        if let sheet = pushSheetVc.sheetPresentationController {
-            sheet.detents = [.medium(), .large()]
+        if let foundNavigation = navigationController { // found navigation
+            present(navigation, animated: true)
         }
-        present(navigation, animated: true)
+        
+
+//        present(navigation, animated: true)
     }
     
     
 }
+
+
+
+
+
 
