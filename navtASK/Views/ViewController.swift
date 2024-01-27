@@ -40,19 +40,14 @@ class ViewController: UIViewController {
     
     @objc
     private func openSheetTapped() {
-        let pushSheetVc = SheetViewController()
-        let navigation = UINavigationController(rootViewController: pushSheetVc)
+        let sheetVc = SheetViewController()
+        let navigation = UINavigationController(rootViewController: sheetVc)
 //
 //        if let sheet = pushSheetVc.sheetPresentationController {
 //            sheet.detents = [.medium(), .large()]
 //        }
         
-        if let foundNavigation = navigationController { // found navigation
-            present(navigation, animated: true)
-        }
-        
-
-//        present(navigation, animated: true)
+        present(navigation, animated: true) // презентить нужно уже в обёртке навигации если я хочу в дальнейшем делать .navigationPush / .navigationPop
     }
     
     
